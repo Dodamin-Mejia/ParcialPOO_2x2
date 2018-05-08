@@ -83,10 +83,14 @@ public class mainPrincipal {
 
                         case 2:
                             //ReservaDeHotel.mostrar();
+                            Administrador1 j=new Administrador1();
                             datos.nextLine();
-                            System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
-                            String n = datos.nextLine();
-                            ReservaDeHotel.eliminarHabitacion(n);
+                            System.out.println("Ingrese el piso: ");
+                            String n = j.getPiso("Ingrese la letra del piso");
+                            System.out.println("ingrese el numero de habitacion: ");
+                            int m=j.getNumeroHabitacion("Ingrese numero de habitacion");
+                            String f=String.valueOf(m);
+                            ReservaDeHotel.eliminarHabitacion(n,f);
                             break;
 
                         case 3:
@@ -112,12 +116,14 @@ public class mainPrincipal {
 
                         case 5:
                             //ReservaDeHotel.mostrar();
+                            Administrador1 a=new Administrador1();
                             datos.nextLine();
-                            System.out.println("Ingrese el piso: ");
-                            String yy = datos.nextLine();
-                            System.out.println("Ingrese el numero de habitacion: ");
-                            String yyy = datos.nextLine();
-                            ReservaDeHotel.eliminarHabitacion(yy, yyy);
+                            //System.out.println("Ingrese el piso: ");
+                            String yy = a.getPiso("ingrese la letra de piso");
+                            //System.out.println("Ingrese el numero de habitacion: ");
+                            int yyy =a.getNumeroHabitacion("ingrese el numero de piso");
+                            String dd=String.valueOf(yyy);
+                            ReservaDeHotel.agregarHabitacion(yy, dd);
                             break;
 
                         case 6:

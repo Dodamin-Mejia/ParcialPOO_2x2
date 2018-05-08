@@ -134,14 +134,18 @@ public class ReservaDeHotel {
     }
 
     public static void mostrar2() {//muestra solo las habitaciones que fueron reservadas
+        int cont=0;
         for (Entry<String, Habitacion> listadehabitaciones : listaDeHabitaciones.entrySet()) {
 
             String clave = listadehabitaciones.getKey();
             Habitacion valor = listadehabitaciones.getValue();
             if ("reservada".equals(valor.estado)) {
                 System.out.println("habitacion " + clave + "       ------       reservada por : " + valor.cliente.nombre);
+                cont++;
             }
 
+        }if(cont==0){
+            System.out.println("no hay habitaciones reservadas en este momento");
         }
 
     }
